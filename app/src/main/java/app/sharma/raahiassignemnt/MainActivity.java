@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
 
 
-    private final String url = "http://localhost:8080/trips/55UMgZqCcoMZv804AkHgtWhB95n1";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +40,21 @@ public class MainActivity extends AppCompatActivity {
         mList = findViewById(R.id.recyclerview);
 
         tripsList = new ArrayList<>();
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
         adapter = new TripAdapter(getApplicationContext(), tripsList);
 
         linearLayoutManager = new LinearLayoutManager(this);
@@ -53,44 +66,8 @@ public class MainActivity extends AppCompatActivity {
         mList.addItemDecoration(dividerItemDecoration);
         mList.setAdapter(adapter);
 
-        getData();
     }
 
-    private void getData() {
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loading...");
-        progressDialog.show();
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new com.android.volley.Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                for (int i = 0; i < response.length(); i++) {
-                    try {
-                        JSONObject jsonObject = response.getJSONObject(i);
-
-                        Trips trip = new Trips();
-                        trip.setTripID(jsonObject.getString("tripID"));
-                        trip.setUserId(jsonObject.getString("userId"));
-                        trip.setLocationId(jsonObject.getString("locationId"));
-
-                        tripsList.add(trip);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        progressDialog.dismiss();
-                    }
-                }
-                adapter.notifyDataSetChanged();
-                progressDialog.dismiss();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("Volley", error.toString());
-                progressDialog.dismiss();
-            }
-        });
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonArrayRequest);
-    }
 
 }
