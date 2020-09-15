@@ -41,20 +41,20 @@ public class MainActivity extends AppCompatActivity {
 
         tripsList = new ArrayList<>();
         tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
-        tripsList.add(new Trips("Shimla", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Keral", "descrption of the place", "454km"));
+        tripsList.add(new Trips("Manali", "descrption of the place", "234km"));
+        tripsList.add(new Trips("Delhi", "descrption of the place", "342km"));
+        tripsList.add(new Trips("Kolkata", "descrption of the place", "564km"));
+        tripsList.add(new Trips("Bengalore", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Pune", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Goa", "descrption of the place", "345km"));
+        tripsList.add(new Trips("Dun", "descrption of the place", "244km"));
+        tripsList.add(new Trips("Himachal", "descrption of the place", "100km"));
+        tripsList.add(new Trips("leh", "descrption of the place", "230km"));
+        tripsList.add(new Trips("Puri", "descrption of the place", "490km"));
+        tripsList.add(new Trips("Podi", "descrption of the place", "140km"));
+        tripsList.add(new Trips("Patna", "descrption of the place", "120km"));
+        tripsList.add(new Trips("Shilong", "descrption of the place", "230km"));
         adapter = new TripAdapter(getApplicationContext(), tripsList);
 
         linearLayoutManager = new LinearLayoutManager(this);
