@@ -1,27 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:background="#ffce33">
 
-    <TextView
-        android:id="@+id/tripid"
+    <androidx.cardview.widget.CardView
+        android:padding="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tripid"
-        android:textSize="18sp"/>
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="30dp"
+        android:outlineAmbientShadowColor="#5E5E5E"
+        android:layout_height="wrap_content">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="105dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tripid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/julius_sans_one"
+                android:gravity="center"
+                android:text="Shimla"
+                android:textColor="#2078BD"
+                android:textSize="44dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/indie_flower"
+                android:gravity="center"
+                android:layout_marginTop="65dp"
+                android:text="this is a demo description"
+                android:textColor="#8E8A8A"
+                app:layout_anchorGravity="center" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#E64078"
+            android:fontFamily="@font/butcherman"
+            android:text="100km"
+            android:textSize="30dp" />
+
+    </androidx.cardview.widget.CardView>
 
 
-    <TextView
-        android:id="@+id/userid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="USer"/>
 
-    <TextView
-        android:id="@+id/locationid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Location"/>
-</LinearLayout>
+</RelativeLayout>

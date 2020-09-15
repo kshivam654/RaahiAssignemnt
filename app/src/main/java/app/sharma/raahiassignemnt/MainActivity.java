@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         tripsList.add(new Trips("Manali", "descrption of the place", "234km"));
         tripsList.add(new Trips("Delhi", "descrption of the place", "342km"));
         tripsList.add(new Trips("Kolkata", "descrption of the place", "564km"));
-        tripsList.add(new Trips("Bengalore", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Benga", "descrption of the place", "100km"));
         tripsList.add(new Trips("Pune", "descrption of the place", "100km"));
         tripsList.add(new Trips("Goa", "descrption of the place", "345km"));
         tripsList.add(new Trips("Dun", "descrption of the place", "244km"));
-        tripsList.add(new Trips("Himachal", "descrption of the place", "100km"));
+        tripsList.add(new Trips("Himac", "descrption of the place", "100km"));
         tripsList.add(new Trips("leh", "descrption of the place", "230km"));
         tripsList.add(new Trips("Puri", "descrption of the place", "490km"));
         tripsList.add(new Trips("Podi", "descrption of the place", "140km"));
